@@ -15,6 +15,7 @@
         "noUnusedParameters": true,
         "outDir": "./dist",
         "strict": true,
+        "target": "esnext",
         "useDefineForClassFields": false
     },
     "include": ["./src/**/*.ts"],
