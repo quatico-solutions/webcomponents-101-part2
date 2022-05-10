@@ -1,0 +1,56 @@
+:host {
+    --my-article__padding: 2em;
+    --my-article__margin: 3em 1em 0.5em;
+}
+
+my-article {
+    display: block;
+}
+
+::slotted(p) {
+    margin: 0;
+}
+
+::slotted {
+
+
+    margin-top: 2em;
+}
+
+::slotted(:first-child){
+    margin-top: 0;
+}
+
+::slotted(:not(:first-child)){
+    margin: var(--my-article__margin);
+}
+
+.article {
+    background: var(--my-background-color__smoke);
+    color: var(--my-font-color__dark);
+    min-width: 50%;
+    padding: var(--my-article__padding);
+}
+
+.article__header {
+    font-size: 1.8em;
+}
+
+.article__title {
+    /*padding-top: 0;*/
+    margin: 0;
+}
+
+.article--white {
+    background: var(--my-background-color__light);
+}
+
+.article--blue {
+    background: var(--my-background-color__secondary);
+    color: var(--my-font-color__light);
+}
+
+.article--blue-light {
+    background: var(--my-background-color__primary);
+    color: var(--my-font-color__light);
+}

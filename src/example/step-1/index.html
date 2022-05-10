@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+    </head>
+    <body id="body">
+        <my-article title="title1">
+            <my-article title="title2" content="slotted in article 1" themeClass="article--white">
+                <my-article title="title3" content="slotted in article 2" themeClass="article--blue-light"></my-article>
+            </my-article>
+            <my-article title="title4" content="slotted in article 1" themeClass="article--blue">
+                <my-article title="title5" content="slotted in article 4" themeClass="article--blue-light"></my-article>
+            </my-article>
+            <my-article title="title6" content="slotted in article 1" themeClass="article--blue">
+                <my-article title="title7" content="slotted in article 6" themeClass="article--blue-light">
+                    <my-article
+                        title="title8"
+                        content="slotted in article 7"
+                        themeClass="article--white"
+                        footer="some footer text"
+                    >
+                        <p>some slotted content in article 8</p>
+                    </my-article>
+                </my-article>
+            </my-article>
+        </my-article>
+        <script type="module" src="/index.ts"></script>
+    </body>
+</html>

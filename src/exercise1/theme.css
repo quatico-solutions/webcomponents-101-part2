@@ -1,0 +1,112 @@
+:root {
+    /* general page wide styles */
+    --my-background-color__light: white;
+    --my-background-color__primary: linear-gradient(90deg, rgba(0,8,101,1) 0%, rgba(0,29,114,1) 48%, rgba(0,13,127,1) 100%);
+    --my-background-color__secondary: linear-gradient(90deg, rgba(0,82,72,1) 0%, rgba(0,114,84,1) 48%, rgba(0,138,118,1) 100%);
+    --my-background-color__dark:linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(54,54,54,1) 48%, rgba(78,78,78,1) 100%);
+    --my-font-color__light: white;
+    --my-font-color__dark: #333;
+    --my-font-color__warning: orange;
+    --my-font-color__primary-negative: lightpink;
+    --my-font-color__secondary-negative: darkgray;
+    --my-body__color: var(--my-font-color__warning);
+    --my-body__background-color: white;
+
+    /* component styles */
+    --my-article__padding: 2em 2em 0.5em 2em;
+    --my-article__padding-top: 4em;
+    --my-article__margin-top: 0;
+    --my-article__border-color: white;
+    --my-element__font-color: var(--my-font-color__dark);
+}
+
+body {
+    color: var(--my-font-color__warning);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+my-article {
+    display: block;
+}
+
+my-article::part(main) {
+    font-size: 5em;
+}
+
+.site-title {
+    font-size: 2em;
+}
+
+/* move global .article styles to Article.ts by using static styles  */
+.article {
+    background: var(--my-background-color);
+    color: var(--my-font-color, var(--my-font-color__dark));
+    padding: var(--my-article__padding);
+    padding-top: var(--my-article__padding-top);
+    border-radius: 0.5em;
+}
+
+.article__header {
+    font-size: 1.8em;
+    border-bottom: 1px solid var(--my-article__border-color);
+    padding-bottom: 0.5em;
+}
+
+.article__date  {
+    font-size: 0.6em;
+}
+
+.article__title {
+    padding-top: 0;
+    margin-top: var(--my-article__margin-top);
+    margin-bottom: 0;
+    color: var(--my-article__font-color, inherit);
+}
+
+.article__footer * {
+    text-decoration: underline;
+}
+
+.article--white {
+    --my-article__border-color: var(--my-font-color__dark);
+    background: var(--my-background-color, var(--my-background-color__light));
+}
+
+.article--blue {
+    background: var(--my-background-color, var(--my-background-color__secondary));
+    color: var(--my-font-color, var(--my-font-color__light));
+}
+
+.article--blue-light {
+    background: var(--my-background-color, var(--my-background-color__primary));
+    color: var(--my-font-color, var(--my-font-color__light));
+}
+
+/* align offsets between html sections
+
+    this will not work any more because .article is inside the my-article component
+
+    set the padding via css custom properties on ArticleList <my-article style="--my-article__padding-top: 0"> element via inline style  */
+.article--white + .article--white,
+.article--blue-light + .article--blue-light {
+    padding-top: 0;
+}
+
+.article__slotted-content {
+    color: var(--my-font-color__dark);
+}
+
+/* refactor toggle dark mode css (remove class nesting by using css custom properties) */
+.theme--dark .article {
+    background: var(--my-background-color__dark);
+    color: var(--my-font-color__secondary-negative);
+}
+
+.theme--dark .article__title {
+    color: var(--my-font-color__primary-negative);
+}
+
+.theme--dark,
+.theme--dark .article--white {
+    --my-article__border-color: var(--my-font-color__light);
+}

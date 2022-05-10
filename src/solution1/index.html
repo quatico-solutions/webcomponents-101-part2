@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+        <title>Vite App</title>
+    </head>
+    <body id="body">
+        <dark-mode-toggle></dark-mode-toggle>
+
+        <br /><br /><br />
+               <my-article
+            title="Article Title 1 - Meditation brooklyn tattooed wayfarers"
+            dateTime="2011-11-18T14:54:39.929"
+            authorName="Heinrich van Hausen"
+            content="I really like this article. It makes a very keen observation on Pinterest cardigan dreamcatcher
+                        seitan yr coloring book. Meditation brooklyn tattooed wayfarers, intelligentsia art party tacos
+                        palo santo freegan chartreuse vice. Actually food truck put a bird on it occupy sartorial,
+                        single-origin coffee tattooed master cleanse ennui celiac fanny pack twee locavore aesthetic.
+                        Plaid hammock bitters vape portland, tote bag vinyl trust fund."
+            footer="#vape #coffee #wayfarers"
+            themeClass="article--blue"
+        ></my-article>
+        <my-article
+            title="Article Title 2 - vegan wayfarers"
+            dateTime="2011-11-18T14:54:39.929"
+            authorName="Mike Power"
+            content="Mumblecore marfa yuccie, +1 migas XOXO sriracha vaporware kitsch woke bicycle rights. Knausgaard
+                        vice copper mug, butcher art party enamel pin vegan wayfarers meh stumptown la croix
+                        asymmetrical. Seitan kickstarter cardigan kale chips yr. Street art kitsch palo santo locavore
+                        hashtag four dollar toast cornhole cliche."
+            footer="#hashtag"
+            themeClass="article--blue-light"
+        ></my-article>
+        <my-article
+            title="Article Title 3 - post-ironic authentic vegan 90's"
+            dateTime="2011-11-18T14:54:39.929"
+            authorName="Cp. Rex Power Colt"
+            content="Normcore godard four dollar toast franzen DIY sriracha sartorial. VHS pok pok artisan
+                        dreamcatcher post-ironic authentic vegan 90's shoreditch health goth taxidermy mlkshk literally
+                        you probably haven't heard of them. Pitchfork iPhone yr letterpress trust fund master cleanse
+                        umami neutra skateboard. Hammock distillery bespoke disrupt sartorial kinfolk, praxis messenger
+                        bag post-ironic thundercats yuccie palo santo salvia fashion axe air plant. Schlitz post-ironic
+                        direct trade PBR&B keffiyeh. Coloring book thundercats stumptown taxidermy, actually roof party
+                        unicorn vice yuccie bicycle rights glossier waistcoat."
+            footer="#stumptown #taxidermy"
+            themeClass="article--white"
+        ></my-article>
+        <my-article
+            title="Article Title 4 - Liquorice halvah chocolate"
+            dateTime="2011-11-18T14:54:39.929"
+            authorName="David Mirra"
+            content="Sweet roll caramels toffee dessert powder gummies. Ice cream caramels cupcake biscuit dragée candy gummi bears.
+                        Tart topping chupa chups soufflé toffee sugar plum lemon drops wafer lemon drops.
+                        Cake shortbread sugar plum sweet roll wafer gummies cake.
+                        Liquorice halvah chocolate croissant tootsie roll ice cream chupa chups cake."
+            footer="#liquorice #croissant"
+            themeClass="article--white"
+            style="--my-article__padding-top: 0;"
+        ></my-article>
+        <!-- list will be extendet by this my-article-list component -->
+        <my-article-list></my-article-list>
+        <my-element>
+            <h1></h1>
+            <p class="article__slotted-content">This is slotted content</p>
+        </my-element>
+        <script type="module" src="/index.ts"></script>
+        <script>
+            // darkmode toggle
+            const body = document.getElementById("body");
+            document.getElementById("darkmode").addEventListener("change", () => {
+                body.classList.toggle("theme--dark");
+            });
+        </script>
+    </body>
+</html>

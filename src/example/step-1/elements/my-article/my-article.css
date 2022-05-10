@@ -1,0 +1,29 @@
+.article {
+    background: var(--my-background-color__smoke);
+    color: var(--my-font-color__dark);
+    padding: 2em;
+    min-width: 50%;
+}
+
+.article__header {
+    font-size: 1.8em;
+}
+
+.article__title {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.article--white {
+    background: var(--my-background-color__light);
+}
+
+.article--blue {
+    background: var(--my-background-color__secondary);
+    color: var(--my-font-color__light);
+}
+
+.article--blue-light {
+    background: var(--my-background-color__primary);
+    color: var(--my-font-color__light);
+}

@@ -1,0 +1,20 @@
+:root {
+    --my-background-color__light: white;
+    --my-background-color__smoke: #ddd;
+    --my-background-color__primary: linear-gradient(90deg, rgba(0,8,101,1) 0%, rgba(0,29,114,1) 48%, rgba(0,13,127,1) 100%);
+    --my-background-color__secondary: linear-gradient(90deg, rgba(0,82,72,1) 0%, rgba(0,114,84,1) 48%, rgba(0,138,118,1) 100%);
+    --my-background-color__dark:linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(54,54,54,1) 48%, rgba(78,78,78,1) 100%);
+    --my-font-color__light: white;
+    --my-font-color__dark: #333;
+    --my-font-color__warning: orange;
+    --my-font-color__primary-negative: lightpink;
+    --my-font-color__secondary-negative: darkgray;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.site-title {
+    font-size: 2em;
+}
