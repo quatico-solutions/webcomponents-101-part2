@@ -1,6 +1,6 @@
 # webcomponents 101 Part 2: Modular styles of web-components with CSS
 
-[![Continuous Build](https://github.com/quatico-solutions/webcomponents-101-part2/actions/workflows/continuous-build.yml/badge.svg?event=push)](https://github.com/quatico-solutions/webcomponents-101-part2/actions/workflows/continuous-build.yml)
+[![Continuous Build](https://github.com/quatico-solutions/webcomponents-101-part2/actions/workflows/continuous-build.yml/badge.svg?branch=main)](https://github.com/quatico-solutions/webcomponents-101-part2/actions/workflows/continuous-build.yml)
 
 An introduction into modern styling of web-components with CSS.
 
