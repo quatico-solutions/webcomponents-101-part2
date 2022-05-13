@@ -1,5 +1,7 @@
 # webcomponents 101 Part 2: Modular styles of web-components with CSS
 
+[![Continuous Build](https://github.com/quatico-solutions/webcomponents-101-part2/actions/workflows/continuous-build.yml/badge.svg?event=push)](https://github.com/quatico-solutions/webcomponents-101-part2/actions/workflows/continuous-build.yml)
+
 An introduction into modern styling of web-components with CSS.
 
 This workshop introduces the concept of modular and self-contained styling for web-components. The shadow root as component boundary, style composition with Sass and style parameterization with CSS variables are presented as the key to components with isolated styling that can be placed freely on a page. We'll learn three fundamental features of Sass that will help you to use the BEM (block-element-modifier) methodology in your daily coding. We'll practice style composition with Sass silent classes, CSS variables, and special CSS selectors for web-components to learn how composition supersedes the known uses of style inheritance for shadowed and exposed HTML elements.
